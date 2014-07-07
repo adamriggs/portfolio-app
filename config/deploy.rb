@@ -10,10 +10,10 @@ set :deploy_user, 'deploy'
 set :default_environment, {
   'PATH' => "/opt/ruby-enterprise/bin/:$PATH"
 }
-set :bundle_gemfile,  "app/Gemfile"
+#set :bundle_gemfile,  "app/Gemfile"
 
 set :scm, :git
-set :repo_url, 'https://github.com/adamriggs/portfolio.git'
+set :repo_url, 'https://github.com/adamriggs/portfolio-app.git'
 set :branch, "master"
 set :deploy_via, :remote_cache
 
