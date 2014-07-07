@@ -1,0 +1,48 @@
+
+
+
+
+<div id="image_box">
+
+<% $projects.each do |project| %>
+	
+<!--
+	<div class="col">
+	
+		<div class="project-tile">
+			<img src="<%= project.thumb.to_s %>"><br>
+			Agency: <%= project.agency.to_s %><br>
+			Client: <%= project.client.to_s %><br>
+			Description: <%= project.description.to_s %><br>
+			<% if project.link.to_s != "" %>
+				<a href="<%= project.link.to_s %>">Link</a>
+			<% end %>
+		</div>
+	
+	</div>
+-->
+	<script>
+		projectArray.push({	title: "<%= project.title.to_s %>",
+							agency: "<%= project.agency.to_s %>",
+							client: "<%= project.client.to_s %>",
+							thumb: "<%= project.thumb.to_s %>",
+							img: "<%= project.img.to_s %>",
+							link: "<%= project.link.to_s %>",
+							description: "<%= project.description.to_s %>",
+							imgObj: null
+							});
+							
+		projectArray.reverse();
+	</script>
+
+<% end %>
+
+</div>
+
+
+
+<script>
+
+init();
+//console.log(projectArray);
+</script>
