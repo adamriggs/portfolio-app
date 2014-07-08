@@ -21,6 +21,7 @@ set :deploy_via, :remote_cache
 set :stages, ["production"]
 
 set :deploy_to, "/var/www/onosen.com/public_html/"
+set :linked_files, %w{ config/database.yml }
 
 set :ssh_options, {
     forward_agent: false,
@@ -99,12 +100,12 @@ namespace :deploy do
 #       end
 #     end
 
-  before "deploy:assets:precompile" do
-	  run ["ln -nfs #{shared_path}/config/settings.yml #{release_path}/config/settings.yml",
-	       "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml",
-	       "ln -fs #{shared_path}/uploads #{release_path}/uploads"
-	  ].join(" && ")
-  end
+#   before "deploy:assets:precompile" do
+# 	  run ["ln -nfs #{shared_path}/config/settings.yml #{release_path}/config/settings.yml",
+# 	       "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml",
+# 	       "ln -fs #{shared_path}/uploads #{release_path}/uploads"
+# 	  ].join(" && ")
+#   end
 
   desc 'Restart application'
   task :restart do
