@@ -38,7 +38,7 @@ gem 'spring',        group: :development
 # gem 'unicorn'
 
 # Use passeneger as the app server
-gem passenger
+# gem passenger
 
 # Be sure to include rake in your Gemfile
 gem 'rake'
