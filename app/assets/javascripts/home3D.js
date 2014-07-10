@@ -662,7 +662,7 @@ function InfoCard(){
 		//console.log('infoCard.showAbout()');
 		clearCard();
 		setTitle();
-		context.fillText('Experience, bitches.  What?', textX, textY);
+		context.fillText('Steve is sexy!', textX, textY);
 		applyTex();
 	}
 	
